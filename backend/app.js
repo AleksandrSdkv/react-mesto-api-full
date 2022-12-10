@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 import mongoose from 'mongoose';
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import { errors } from 'celebrate';
@@ -16,8 +16,10 @@ import { requestLogger, errorLogger } from './middlewares/logger.js';
 
 dotenv.config();
 const config = dotenv.config({ path: path.resolve(process.env.NODE_ENV === 'production' ? '.env' : '.env.common') }).parsed;
-// подключаемся к серверу mongo
+
 const app = express();
+
+app.set('config', config);
 
 app.use(cors({
   origin: '*',
