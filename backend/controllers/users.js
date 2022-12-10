@@ -105,9 +105,6 @@ export const login = (req, res, next) => {
   const { JWT_SECRET } = req.app.get('config');
   return userModel.findUserByCredentials(email, password)
     .then((user) => {
-      if (!user) {
-        throw new NotFoundError('Нет пользователя с таким id');
-      }
       // создадим токен
       const token = jwt.sign(
         { _id: user._id },
@@ -123,8 +120,12 @@ export const login = (req, res, next) => {
           httpOnly: true,
         }).send({ token });
     })
-    .catch(() => {
-      next(new UnauthorizedError('Неверный логин или пароль'));
+    .catch((err) => {
+      if (err.name === 'UnauthorizedError') {
+        next(new UnauthorizedError('Неправильные почта или пароль'));
+      } else {
+        next(err);
+      }
     });
 };
 
