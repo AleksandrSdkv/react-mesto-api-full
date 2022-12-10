@@ -52,7 +52,7 @@ class Api {
         this._headers.Authorization = `Bearer ${token}`
     }
     deleteCard(cardID) {
-        return fetch(`http://localhost:3000/cards/${cardID}`, {
+        return fetch(`https://api.domainname.projmesto.nomoredomains.club/cards/${cardID}`, {
             headers: this._headers,
             method: 'DELETE',
         }).then(this._getResponseData)
@@ -60,13 +60,13 @@ class Api {
 
     changeLikeCardStatus(cardID, isLiked) {
         if (isLiked) {
-            return fetch(`http://localhost:3000/cards/${cardID}/likes`, {
+            return fetch(`https://api.domainname.projmesto.nomoredomains.club/cards/${cardID}/likes`, {
                 headers: this._headers,
                 method: 'PUT',
             })
                 .then(this._getResponseData)
         } else {
-            return fetch(`http://localhost:3000/cards/${cardID}/likes`, {
+            return fetch(`https://api.domainname.projmesto.nomoredomains.club/cards/${cardID}/likes`, {
                 headers: this._headers,
                 method: 'DELETE',
             })
@@ -75,7 +75,7 @@ class Api {
     }
 }
 const apiConfig = {
-    url: "http://localhost:3000",
+    url: "https://api.domainname.projmesto.nomoredomains.club",
     headers: {
         "content-type": "application/json",
         "Authorization": "",

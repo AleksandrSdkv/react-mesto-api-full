@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://api.domainname.projmesto.nomoredomains.club';
 const apiRequest = ({
     url,
     method = 'POST',
