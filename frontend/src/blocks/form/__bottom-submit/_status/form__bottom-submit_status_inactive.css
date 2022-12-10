@@ -1,0 +1,7 @@
+.form__bottom-submit_status_inactive {
+    background-color: white;
+    color: #E5E5E5;
+    pointer-events: none;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+}

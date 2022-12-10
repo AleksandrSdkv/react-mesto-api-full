@@ -1,0 +1,8 @@
+.header__nav_logo {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

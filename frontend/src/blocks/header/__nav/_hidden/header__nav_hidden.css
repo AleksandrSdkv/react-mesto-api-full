@@ -1,0 +1,12 @@
+.header__nav_hidden {
+    display: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 521px) {
+    .header__nav_hidden {
+        display: flex;
+    }
+}

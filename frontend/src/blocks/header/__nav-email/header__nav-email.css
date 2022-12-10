@@ -1,0 +1,13 @@
+.header__nav-email {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 40px 0 18px;
+}
+
+@media screen and (max-width: 350px) {
+    .header__nav-email {
+        margin: 40px 0 18px 0;
+    }
+}

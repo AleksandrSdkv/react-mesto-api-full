@@ -1,0 +1,41 @@
+.header {
+    width: 100%;
+    margin: 45px 0 0 0;
+    display: flex;
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
+    justify-content: space-between;
+    align-content: center;
+    align-items: baseline
+}
+
+@media screen and (max-width: 1025px) {
+    .header {
+        margin: 38px 0 0 0;
+    }
+    .header::after {
+        margin: 35.6px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header::after {
+        margin: 31.6px 0 0 0;
+    }
+    .header {
+        margin: 32px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .header {
+        margin: 0 0 0 0;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        margin: 0 0 0 0;
+    }
+}

@@ -1,0 +1,51 @@
+.profile__overlay {
+    background-color: rgba(0, 0, 0, .8);
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content: space-around;
+    flex-wrap: wrap;
+    opacity: 0;
+    transition: visibility .3s, opacity .3s linear;
+}
+
+.profile__overlay:hover {
+    opacity: 1;
+    transition: opacity .3s, opacity .3s linear;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 890px) {
+    .profile__overlay {
+        width: 95px;
+        height: 95px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .profile__overlay {
+        height: 127px;
+        width: 127px;
+        top: 122px;
+    }
+}
+
+@media screen and (max-width: 521px) {
+    .profile__overlay {
+        height: 127px;
+        width: 127px;
+        top: 270px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .profile__overlay {
+        height: 127px;
+        width: 127px;
+        top: 291px;
+    }
+}

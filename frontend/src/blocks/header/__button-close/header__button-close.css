@@ -1,0 +1,27 @@
+.header__button-close {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    outline: none;
+    background-image: url(../../../image/CloseconSVG.svg);
+    padding: 0;
+    cursor: pointer;
+    order: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    margin-right: 30px;
+}
+
+.header__button-close:hover {
+    opacity: .6;
+}
+
+@media screen and (max-width: 520px) {
+    .header__button-close {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+}

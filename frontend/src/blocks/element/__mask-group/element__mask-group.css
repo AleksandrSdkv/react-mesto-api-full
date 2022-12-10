@@ -1,0 +1,10 @@
+.element__mask-group {
+    height: 282px;
+    width: 100%;
+    object-fit: cover;
+    background: #C4C4C4;
+}
+
+.element__mask-group:hover {
+    cursor: pointer;
+}

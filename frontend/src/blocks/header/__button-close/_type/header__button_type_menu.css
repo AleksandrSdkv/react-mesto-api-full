@@ -1,0 +1,27 @@
+.header__button_type_menu {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    outline: none;
+    background-image: url(../../../../image/buttonMenu.png);
+    padding: 0;
+    cursor: pointer;
+    order: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    margin-right: 30px;
+}
+
+.header__button_type_menu :hover {
+    opacity: .6;
+}
+
+@media screen and (max-width: 520px) {
+    .header__button_type_menu {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+}
